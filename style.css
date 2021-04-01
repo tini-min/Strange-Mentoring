@@ -28,13 +28,19 @@ nav a{
     width: 18%;
     height: 40px;
     padding: 5px;
-    text-align: center;             
+    text-align: center;    
+    font-weight: bold;         
 }
 nav a:link, a:visited {color : white;}
 nav a:hover, a:active {
     background-color: white;
     color : lightskyblue;
 }
+.disable { color : gray !important; }
+sup { 
+    color : red;
+    font-size: x-small;
+ }
 #cover {
     text-align: center; 
     position: relative;
