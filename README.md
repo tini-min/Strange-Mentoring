@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+## Welcome to Strange Mentoring
 
-You can use the [editor on GitHub](https://github.com/Math-Huns/Strange-Mentoring/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+You can use [our mentoring service](https://math-huns.github.io/Strange-Mentoring/main.html) to prepare for competitions, etc., but to find mentors due to lack of experience.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Or you can explore [our repository](https://github.com/Math-Huns/Strange-Mentoring) to see how our services are organized.
 
-### Markdown
+### Main Code
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The code below is our core code to implement a customized recommendation service.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```python
+#Main Code (Prod. by heo)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Developer Github
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Math-Huns/Strange-Mentoring/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- [tini-min](https://github.com/tini-min) : Build site framework and login system
+- [herjh0405](https://github.com/herjh0405) : Build a customized recommendation system and matching system based on big data
