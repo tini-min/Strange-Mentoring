@@ -51,16 +51,30 @@
         </script>
         <script type="text/javascript">
             function loginWithKakao() {
-            Kakao.init('d95b3958b7371e069942b4df18707e57');
-            Kakao.isInitialized();
+            if (!Kakao.isInitialized()) Kakao.init('d95b3958b7371e069942b4df18707e57');
     
-            console.log("Kakao.isInitialized()", Kakao.isInitialized());
               Kakao.Auth.login({
                 success: function(authObj) {
-                  alert(JSON.stringify(authObj))
+                    alert(JSON.stringify(authObj))
+                    Kakao.API.request({
+                        url: '/v1/user/me',
+                        success: function(response) {
+                            var userID = response.id;
+                            var useEmail = response.kakao_account.email;
+                            var useNickName = response.properties.nickname;
+                            
+                            console.log("userID", userID);
+                            console.log("useEmail", useEmail);
+                            console.log("useNickName", useNickName);
+                            
+                        },
+                        fail: function(error) {
+                            console.log("request fail", error);
+                        }
+                    });
                 },
                 fail: function(err) {
-                  alert(JSON.stringify(err))
+                    alert(JSON.stringify(err))
                 },
               })
             }
