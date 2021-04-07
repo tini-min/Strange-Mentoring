@@ -1,28 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>수상한 멘토링::팀빌딩부터 수상까지, AI와 함께!</title>
-    <link rel="stylesheet" href="style.css"/>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script>
-        $(document).ready(function(){
-            $("#header").load("basis.html .header", function(){
-                var power_btn_func = document.createElement('script');
-                power_btn_func.type = "text/javascript";
-                power_btn_func.src = "power_btn.js";
-
-                $(this).append(power_btn_func);
-            });
-            $("#nav").load("basis.html .nav");
-        });
-    </script>
+    <script src="./init.js" charset="UTF-8"></script>
+    <style>
+        #title{
+           width: 50%;
+           height: 30px;
+           padding: 20px;
+           margin: 10px;
+           font-size: 20px;
+           text-align: center;
+           background-color: darkcyan;
+           color: white;
+           border-radius: 5px;
+        }
+        form{
+            width: 50%;
+            padding: 20px;
+        }
+        label[for], .checkboxLabel{
+            display: inline-block;
+            height: 30px; 
+        }
+        input[type=text], .box3, textarea{
+            width: 100%;
+            height: 40px;
+            border: solid 1px #8c8c8c;
+            margin-bottom: 10px;
+        }
+        .checkbox{
+            padding: 10px 0px 0px 20px;
+            box-sizing: border-box;
+        }
+        #txt_year, #txt_day, select{
+            width: 30%;
+        }
+        select{
+            margin-left:  15px;
+            margin-right: 15px;
+            height: 40px;
+        }
+        textarea{
+            height: 80px;
+        }
+        input[type=submit], input[type=reset], input[type=button]{
+            width: 47%;
+            height: 30px;
+            margin: 5px;
+            text-align: center;
+            background-color: darkcyan;
+            color: white;
+            border-radius: 5px;
+        }
+        #buttonBox{
+            text-align: center;
+            margin: 5px;
+        }
+        .forms{
+            float: left;
+            border:solid 2px cadetblue;
+        }
+    </style>
 </head>
 <body>
     <header id="header"></header>
     <nav id="nav"></nav>
-    <div id = "cover">
-        
+    <div id = "content">
+        <div id="title">회원가입</div>
+        <div class="forms">
+            <form name="myform" method="get" action="test.html">
+                <label for="userName"> 성명 </label>
+                <input type="text" id="userName" name="userName" placeholder="성명을 입력하세요.">
+                <label for="userEmail"> E-mail </label>
+                <input type="text" id="userEmail" name="userEmail" placeholder="메일주소를 입력하세요.">
+                <label for="txt_year"> 생년월일 </label><br>
+                <input type="text" id="txt_year" name="txt_year" placeholder="년도">
+                <select name="sel_mon">
+                    <option value="" selected>월 선택</option>
+                    <option value="01">1월</option>
+                    <option value="02">2월</option>
+                    <option value="03">3월</option>
+                    <option value="04">4월</option>
+                    <option value="05">5월</option>
+                    <option value="06">6월</option>
+                    <option value="07">7월</option>
+                    <option value="08">8월</option>
+                    <option value="09">9월</option>
+                    <option value="10">10월</option>
+                    <option value="11">11월</option>
+                    <option value="12">12월</option>
+                </select>
+                <input type="text" id="txt_day" name="txt_day" placeholder="일"><br>
+                <label class="checkboxLabel"> 성별 </label>
+                <div class="checkbox">
+                    <input type="radio" name="gender" id="m" value="남" checked>
+                    <label for="m">남</label>
+                    <input type="radio" name="gender" id="f" value="여">
+                    <label for="f">여</label>
+                </div>
+                <label class="checkboxLabel"> 관심분야 </label>
+                <div class="checkbox">
+                    <input type="checkbox" name="c" id="c" value="C"> <label for="c">C</label>
+                    <input type="checkbox" name="p" id="p" value="Python"> <label for="p">Python</label>
+                    <input type="checkbox" name="r" id="r" value="R"> <label for="r">R</label><br>
+                </div>
+                <label for="etc"> 기타 </label>
+                <textarea name="etc" id="etc"></textarea>
+                <div id="buttonBox">
+                    <input type="button" value="확인">
+                    <!-- onclick="check()" -->
+                    <input type="reset" value="취소">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
