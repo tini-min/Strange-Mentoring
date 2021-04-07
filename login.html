@@ -64,9 +64,8 @@
                             var useNickName = response.properties.nickname;
                             
                             console.log("userID", userID);
-                            console.log("useEmail", useEmail);
-                            console.log("useNickName", useNickName);
-                            
+                            console.log("userEmail", useEmail);
+                            console.log("userNickName", useNickName);
                         },
                         fail: function(error) {
                             console.log("request fail", error);
@@ -79,37 +78,5 @@
               })
             }
           </script>
-        <!-- <script src = "https://developers.kakao.com/sdk/js/kakao.js">
-            Kakao.init('d95b3958b7371e069942b4df18707e57');
-            Kakao.isInitialized();
-
-            console.log("Kakao.isInitialized()", Kakao.isInitialized());
-
-            Kakao.Auth.createLoginButton({
-                container: '#kakao_btn',
-                success: function(response) {
-                    Kakao.API.request({
-                        url: '/v2/user/me',
-                        success: function(response) {
-                            var userID = response.id;
-                            var useEmail = response.kakao_account.email;
-                            var useNickName = response.properties.nickname;
-                            
-                            console.log("userID", userID);
-                            console.log("useEmail", useEmail);
-                            console.log("useNickName", useNickName);
-                            
-                        },
-                        fail: function(error) {
-                            console.log("request fail", error);
-                        }
-                    });
-                    
-                },
-                fail: function(error) {
-                    console.log("fail", error);
-                },
-            });
-        </script> -->
     </body>
 </html>
