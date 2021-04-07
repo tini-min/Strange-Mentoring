@@ -57,7 +57,7 @@
                 success: function(authObj) {
                     alert(JSON.stringify(authObj))
                     Kakao.API.request({
-                        url: '/v1/user/me',
+                        url: '/v2/user/me',
                         success: function(response) {
                             var userID = response.id;
                             var useEmail = response.kakao_account.email;

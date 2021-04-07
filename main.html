@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="./init.js" charset="UTF-8"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#header").load("basis.html .header", function(){
-                var power_btn_func = document.createElement('script');
-                power_btn_func.type = "text/javascript";
-                power_btn_func.src = "power_btn.js";
-
-                $(this).append(power_btn_func);
-            });
-            $("#nav").load("basis.html .nav");
-        });
-    </script>
+    <script src="./init.js" charset="UTF-8"></script>
 </head>
 <body>
     <header id="header"></header>
     <nav id="nav"></nav>
-    <div id = "cover"></div>
+    <div id = "content"></div>
 </body>
 </html>

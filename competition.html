@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>수상한 멘토링::팀빌딩부터 수상까지, AI와 함께!</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./init.js" charset="UTF-8"></script>
     <style>
         .frame {
                 width: 300px;
@@ -53,19 +52,12 @@
             overflow: scroll;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#header").load("basis.html .header", function(){
-                var power_btn_func = document.createElement('script');
-                power_btn_func.type = "text/javascript";
-                power_btn_func.src = "power_btn.js";
+</head>
+<body>
+    <header id = "header"></header>
+    <nav id = "nav"></nav>
+    <div id = "content"></div>
 
-                $(this).append(power_btn_func);
-            });
-            $("#nav").load("basis.html .nav");
-        });
-    </script>
     <script>
         var info_path = "data/"
         $.ajax({
@@ -94,12 +86,12 @@
                 sketch.html("<h3>" + elements[3 * i].replace('"', " ") + "</h3>");
                 
                 frame.append(poster); poster.after(sketch);
-                $("#cover").append(frame);
+                $("#content").append(frame);
             }
             console.log("file open completed.")
         }
         function AddFunc(elements) {
-            var origin_html = $('#cover').html();
+            var origin_html = $('#content').html();
             $('.sketch').mouseenter(function(){
                 var html_str = $(this).html();
                 if (html_str.substr(1, 7) != 'marquee') { $(this).html("<marquee>" + html_str + "</marquee>"); }
@@ -125,15 +117,10 @@
                 back.append('<a href = "competition.html"><span class="material-icons"> format_list_bulleted 목록보기 </span></a>');
                 $(back).children('a').css({'color' : 'black', 'margin' : '20px'});
 
-                $('#cover').html(image); $('#cover').append(info); $('#cover').append(back);
+                $('#content').html(image); $('#content').append(info); $('#content').append(back);
             });
             console.log("func. set completed.")
         }
     </script>
-</head>
-<body>
-    <header id = "header"></header>
-    <nav id = "nav"></nav>
-    <div id = "cover"></div>
 </body>
 </html>

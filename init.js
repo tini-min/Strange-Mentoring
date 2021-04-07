@@ -9,7 +9,18 @@ var googleIcons = document.createElement('link');
 googleIcons.rel = "stylesheet";
 googleIcons.href = "https://fonts.googleapis.com/icon?family=Material+Icons";
 
-document.head.appendChild(title);
+document.head.prepend(title);
 document.head.appendChild(kakaoAPI);
 document.head.appendChild(style);
 document.head.appendChild(googleIcons);
+
+$(document).ready(function(){
+    $("#header").load("basis.html .header", function(){
+        var power_btn_func = document.createElement('script');
+        power_btn_func.type = "text/javascript";
+        power_btn_func.src = "power_btn.js";
+
+        $(this).append(power_btn_func);
+    });
+    $("#nav").load("basis.html .nav");
+});
