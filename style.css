@@ -50,7 +50,6 @@ sup {
     height : 100%;
     position : absolute;
     left:0px; top:0px; 
-    background-color : #ffffff; 
     background-color : rgba( 0, 0, 0, 0.7 ); 
     
     display: flex;
@@ -59,6 +58,11 @@ sup {
 #signup_box {
     display: inline-block; 
     margin: 0 auto;
+    background-color : lightseagreen;
+}
+#login_btn_list {
+    margin: 0px;
+    padding: 10px;
 }
 .signup {
     width:350px;
