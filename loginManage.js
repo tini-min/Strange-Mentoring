@@ -1,8 +1,6 @@
 var signup_box = document.getElementById("signup_box");
 
-function makeLoginList(event) {
-    if (event != null) event.stopPropagation();
-    
+function makeLoginList() {
     if (document.getElementById("login_btn_list")) signup_box.removeChild(document.getElementById("login_btn_list"));
     else if (document.getElementById("signupForm")) signup_box.removeChild(document.getElementById("signupForm"));
 
@@ -36,7 +34,7 @@ function makeLoginList(event) {
                 hyper.href = "#";
                 break;
             case 4 :
-                hyper.href = "signup.html";
+                hyper.href = "javascript:loginWithBasic()";
                 break;
             default :
                 break;
@@ -47,9 +45,7 @@ function makeLoginList(event) {
         signup_box.appendChild(login_btn_list);
     }
 }
-function makeSignupForm(event) {
-    event.stopPropagation();
-
+function makeSignupForm() {
     if (document.getElementById("login_btn_list")) signup_box.removeChild(document.getElementById("login_btn_list"));
     else if (document.getElementById("signupForm")) signup_box.removeChild(document.getElementById("signupForm"));
 

@@ -32,7 +32,9 @@
         </div>
     </form>
     <script>
+        console.log("0");
         const signupForm = document.querySelector("#signup-form");
+        console.log("1");
         const signupButton = document.querySelector("#signup-button");
         const password = document.querySelector("#password");
         const passwordCheck = document.querySelector("#password-check");
