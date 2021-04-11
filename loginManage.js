@@ -55,17 +55,7 @@ function makeSignupForm(event) {
 
     var signupForm = document.createElement("div");
     signupForm.id = "signupForm";
-    var forms = document.createElement("div");
-    forms.className = "forms";
-    var myform = document.createElement("form");
-    myform.name = "myform"; myform.method = "get"; myform.action="test.html";
-    var emailLabel = document.createElement("label");
-    emailLabel.for = "userEmail"; emailLabel.innerHTML = "E-mail";
-    var userEmail = document.createElement("input");
-    userEmail.type = "text"; userEmail.id = "userEmail"; userEmail.name = "userEmail"; userEmail.placeholder = "메일주소를 입력하세요.";
-    
-    myform.appendChild(emailLabel); myform.appendChild(userEmail);
-    forms.appendChild(myform);
-    signupForm.appendChild(forms);
     signup_box.appendChild(signupForm);
+
+    $("#signupForm").load("signup.php");
 }
