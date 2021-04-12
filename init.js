@@ -18,7 +18,7 @@ $(document).ready(function(){
     $("#header").load("basis.html .header", function(){
         var power_btn = document.createElement('div');
         $(power_btn).load("power_btn.php");
-        console.log("new_btn");
+        power_btn.style = "float: right;"
 
         $(this).append(power_btn);
     });
