@@ -16,11 +16,11 @@ document.head.appendChild(googleIcons);
 
 $(document).ready(function(){
     $("#header").load("basis.html .header", function(){
-        var power_btn_func = document.createElement('script');
-        power_btn_func.type = "text/javascript";
-        power_btn_func.src = "power_btn.js";
+        var power_btn = document.createElement('div');
+        $(power_btn).load("power_btn.php");
+        console.log("new_btn");
 
-        $(this).append(power_btn_func);
+        $(this).append(power_btn);
     });
     $("#nav").load("basis.html .nav");
 });
