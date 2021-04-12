@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "b7824668", "test", "3306");
+$conn = mysqli_connect("localhost", "bu", "2021", "userinfo", 3306);
 $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
 echo $hashedPassword;
 $sql = "
@@ -16,7 +16,7 @@ if ($result === false) {
 ?>
     <script>
         alert("회원가입이 완료되었습니다");
-        location.href = "index.php";
+        location.href = window.history.back();
     </script>
 <?php
 }

@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "b7824668", "test", 3306);
+$conn = mysqli_connect("localhost", "bu", "2021", "userinfo", 3306);
 //아이디 비교와 비밀번호 비교가 필요한 시점이다.
 // 1차로 DB에서 비밀번호를 가져온다 
 // 평문의 비밀번호와 암호화된 비밀번호를 비교해서 검증한다.
@@ -32,7 +32,7 @@ if ($passwordResult === true) {
 ?>
     <script>
         alert("로그인에 성공하였습니다.")
-        location.href = "index.php";
+        location.href = window.history.back();
     </script>
 <?php
 } else {
@@ -40,7 +40,7 @@ if ($passwordResult === true) {
 ?>
     <script>
         alert("로그인에 실패하였습니다");
-        location.href = "index.php";
+        location.href = window.history.back();
     </script>
 <?php
 }
